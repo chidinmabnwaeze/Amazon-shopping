@@ -1,9 +1,7 @@
+let productsHTML = "";
 
-
-let productsHTML = '';
-
-products.forEach((product)=>{
-   productsHTML += `
+products.forEach((product) => {
+  productsHTML += `
     <div class="product-container">
     <div class="product-image-container">
       <img class="product-image"
@@ -23,7 +21,7 @@ products.forEach((product)=>{
     </div>
 
     <div class="product-price">
-   $${(product.priceInCents /100).toFixed(2)}
+   $${(product.priceInCents / 100).toFixed(2)}
     </div>
 
     <div class="product-quantity-container">
@@ -48,14 +46,18 @@ products.forEach((product)=>{
       Added
     </div>
 
-    <button class="add-to-cart-button button-primary">
-      Add to Cart
+    <button class="add-to-cart-button button-primary js-addToCart">
+      Add to Cart 
     </button>
   </div>
   `;
 });
 
-console.log(productsHTML)
-document.querySelector('.js-products-grid').innerHTML = productsHTML;
+console.log(productsHTML);
+document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
-document.querySelectorAll()
+document.querySelectorAll(".js-addToCart").forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log("product added");
+  });
+});
