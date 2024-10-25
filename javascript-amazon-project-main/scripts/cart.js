@@ -1,6 +1,0 @@
-const cart = [
-  {
-    name: "",
-    quantity: "",
-  },
-];
