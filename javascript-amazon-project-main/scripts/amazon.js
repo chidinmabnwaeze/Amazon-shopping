@@ -1,3 +1,5 @@
+import {cart} from '../data/cart.js'
+
 let productsHTML = "";
 
 products.forEach((product) => {
@@ -24,7 +26,7 @@ products.forEach((product) => {
    $${(product.priceInCents / 100).toFixed(2)}
     </div>
 
-    <div class="product-quantity-container">
+    <div class="product-quantity-container js-quantitySelector">
       <select>
         <option selected value="1">1</option>
         <option value="2">2</option>
@@ -71,7 +73,9 @@ document.querySelectorAll(".js-addToCart").forEach((button) => {
     });
 
     if (matchingItem) {
-      matchingItem.quantity += 1;
+      document.querySelector('.js-quantitySelector').innerHTML = matchingItem.quantity += 1;
+
+      
     } else {
       // to add items to our cart when we click on add to cart button
       cart.push({
