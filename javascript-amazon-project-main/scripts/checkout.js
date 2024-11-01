@@ -1,6 +1,7 @@
 import { cart, removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
+// import { updateCartQuantity } from "./amazon.js";
 
 let cartSummaryHTML = '' ;
 
@@ -110,3 +111,20 @@ link.addEventListener('click', ()=>{
 container.remove();
 })
 })
+
+// let quantityCountHTML = ""
+
+// quantityCountHTML += 
+// `  let cartQuantity = 0;
+// cart.forEach((item) => {
+//   cartQuantity += item.quantity;
+// });
+
+// document.querySelector(".js-cartQuantity").innerHTML = cartQuantity;`
+// function quantityCount (){
+//     let cartQuantity = 0;
+//     cart.forEach((item) => {
+//       cartQuantity += item.quantity;
+//     });
+//     document.querySelector(".js-quantity-count").innerHTML = cartQuantity;
+// }
