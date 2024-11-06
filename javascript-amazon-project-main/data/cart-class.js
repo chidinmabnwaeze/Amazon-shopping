@@ -1,15 +1,15 @@
 class Cart {
   cartItems;
-  localStoragekey = undefined;
+  #localStoragekey = undefined;
   //whether you write it as = undefined or just the object and a semicolon they mean the same thing but best practice can be just ending with a semi-colon
 
   constructor(localStoragekey) {
-    this.localStoragekey = localStoragekey;
-    this.loadFromStorage();
+    this.#localStoragekey = localStoragekey;
+    this.#loadFromStorage();
   }
 
-  loadFromStorage() {
-    this.cartItems = JSON.parse(localStorage.getItem(this.localStoragekey));
+  #loadFromStorage() {
+    this.cartItems = JSON.parse(localStorage.getItem(this.#localStoragekey));
 
     if (!this.cartItems) {
       this.cartItems = [
