@@ -36,7 +36,12 @@ class Product{
 }
 
 class Clothing extends Product {
+sizeChartLink;
 
+constructor(productDetails){
+  super(productDetails)
+  this.sizeChartLink = productDetails.sizeChartLink
+}
 }
 const tshirt = new Clothing( {
   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
@@ -51,6 +56,7 @@ const tshirt = new Clothing( {
   type: "clothing",
   sizeChartLink: "images/clothing-size-chart.png",
 })
+console.log(Clothing)
 
 
 export const products = [
